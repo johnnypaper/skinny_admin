@@ -1,0 +1,15 @@
+
+
+
+<div class="row" style="height: 100px; text-align: center;">
+  <div class="col-xs-12">
+    <span style="font-size: 22px;">This is the form partial passed to <%= reg_name %>#create or <%= reg_name %>#update <br> View located in views/admin/<%= option_name %>/_form.</span>
+  </div>
+  <div class="col-xs-12">
+    <span style="font-size: 22px;">When using creating your form, dont forget to use the [:admin, @model] in the form_for to have the admin namespace handled correctly.</span>
+  </div>
+</div>
+
+<%%= form_for([:admin, @<%= option_name.singularize %>]) do |f|%>
+
+<%% end %>

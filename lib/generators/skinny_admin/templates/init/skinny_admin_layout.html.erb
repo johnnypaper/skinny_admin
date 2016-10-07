@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skinny Admin</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|PT+Sans+Narrow" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row" style="border-bottom: 1px solid grey; height: 50px;">
+      <div class="col-xs-2" style="text-align: center;">
+        <%= link_to "<span style=\"font-family: 'PT Sans Narrow'; font-size: 35px;\">Skinny</span><span style=\"font-family: 'Fjalla One'; font-size: 30px;\">Admin</span>".html_safe, admin_dashboard_path, style: 'text-decoration: none; background-color: transparent; color: black;' %>
+      </div>
+      <div class="col-xs-2 col-xs-offset-8" style="text-align: center;">
+        <%= link_to '<span class="glyphicon glyphicon-home" aria-hidden="true"></span>'.html_safe , root_path, style: 'position: relative; top: 7px; font-size: 30px; color: black; background: transparent;' %>
+      </div>
+    </div>
+    <div class="row" style="background-color: lightblue; min-height: 30px;">
+      <div class="row" style="display: none;" id="lastModel"></div> <!-- DO NOT DELETE THIS ROW OR MAKE SURE IT IS AT THE END OF WHERE YOU WANT YOUR MODELS ADDED -->
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

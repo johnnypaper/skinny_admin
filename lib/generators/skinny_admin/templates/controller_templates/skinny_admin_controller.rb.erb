@@ -1,0 +1,59 @@
+module Admin
+  class <%= reg_name %>Controller < SkinnyAdminController
+
+    def index
+      # We've only selected the first 10.  It's up to you how you wanna do it.
+      # Maybe you wanna sort a different way, or just paginate all of the objects.
+      # gem 'will_paginate' https://github.com/mislav/will_paginate is our favorite pagination
+      @<%= option_name %> = <%= reg_name.singularize %>.limit(10)
+    end
+
+    def show
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.find(params[:id])
+    end
+
+    def new
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.new
+    end
+
+    def create
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.new(<%= option_name.singularize %>_params)
+      if @<%= option_name.singularize %>.save
+        redirect_to :action => 'show', :id => @<%= option_name.singularize %>.id
+      else
+        #HANDLE YOUR OWN ERRORS ;)
+      end
+    end
+
+    def edit
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.find(params[:id])
+    end
+
+    def update
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.find(params[:id])
+      if @<%= option_name.singularize %>.update_attributes(params[:<%= option_name.singularize %>])
+        redirect_to :action => 'show', :id => @<%= option_name.singularize %>.id
+      else
+        #HANDLE YOUR OWN ERRORS ;)
+      end
+    end
+
+    def destroy
+      @<%= option_name.singularize %> = <%= reg_name.singularize %>.find(params[:id])
+      if @<%= option_name.singularize %>.destroy
+        redirect_to admin_<%= option_name %>_path
+      else
+        #HANDLE YOUR OWN ERRORS ;)
+      end
+    end
+
+
+    private
+
+    def <%= option_name.singularize %>_params
+      #HANDLE YOUR OWN MODEL PARAMS HERE ;)
+      #params.require(:<%= option_name.singularize %>).permit(:blah, :blah1, :blah2)
+    end
+
+  end
+end

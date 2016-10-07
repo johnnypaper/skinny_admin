@@ -1,0 +1,48 @@
+
+<div class="row" style="height: 100px; text-align: center; margin-top: 30px;">
+  <div class="col-xs-12">
+    <span style="margin-top: 35px;"><span style="/*noinspection CssNoGenericFontName*/font-family: 'PT Sans Narrow'; font-size: 75px;">Skinny</span><span style="/*noinspection CssNoGenericFontName*/font-family: 'Fjalla One'; font-size: 68px;">Admin</span></span>
+    <br><br>
+    <span style="font-size: 22px;">This is the Admin <%= reg_name %>#index Controller | View located in views/admin/<%= option_name %>/index.</span>
+    <br>
+    <br> Please review the <%%= link_to 'Docs', 'http://skinnyadmin.org' %> so that you avoid any irritations that otherwise you wouldn't have had the hassle of dealing with.
+
+    <br>Do Something Cool Here Maybe.  Below is a basic table.  Maybe You want to paginate the table, add some charts here, etc.  Who knows? <br>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2" style="text-align: center; padding: 0; margin-top: 15px;"><%%= link_to 'Add a <%= reg_name.singularize %>', new_admin_<%= option_name.singularize %>_path, class: 'btn btn-primary', style: 'width: 100%; color: white;' %></div>
+</div>
+
+<% if options.index_partial? %>
+  <%% render 'index' %>
+<% else %>
+  <%% if @<%= option_name %>.size > 0 %>
+      <div class="row">
+        <div class="col-xs-12" style="overflow-x: scroll; margin-top: 30px;">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Actions</th>
+              <%% @<%= option_name %>.first.attributes.keys.each do |k| %>
+                  <th><%%= k.gsub('<%= option_name.singularize %>_', '') %></th>
+              <%% end %>
+            </tr>
+            </thead>
+            <tbody>
+            <%% @<%= option_name %>.each do |w| %>
+                <tr>
+                  <td><%%= link_to 'View', admin_<%= option_name.singularize %>_path(id: w.id), class: 'btn btn-xs btn-primary', style: 'color: white;' %> <%%= link_to 'Edit', edit_admin_<%= option_name.singularize %>_path(id: w.id), class: 'btn btn-xs btn-warning', style: 'color: white;' %> <%%= link_to 'Delete', admin_<%= option_name.singularize %>_path(id: w.id), class: 'btn btn-xs btn-danger', style: 'color: white;', method: :delete, data: {confirm: 'You are about to delete this object.  Are you sure?'} %></td>
+                  <%% w.attributes.keys.each do |val| %>
+                      <td><%%= w[val] %></td>
+                  <%% end %>
+                </tr>
+            <%% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  <%% end %>
+<% end %>

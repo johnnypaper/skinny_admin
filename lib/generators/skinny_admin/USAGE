@@ -1,0 +1,51 @@
+Description:
+    Generate an admin framework for you to customize.
+
+Example:
+    rails generate skinny_admin:install
+
+    This will create:
+        # JS FILES
+        app/assets/javavscripts/admin/admin_layout.js
+        app/assets/javavscripts/admin/dashboard.js
+
+        # CSS FILES
+        app/assets/stylesheets/admin/admin_layout.css
+        app/assets/javavscripts/admin/dashboard.css
+
+        # CONTROLLER FILES
+        app/controllers/skinny_admin_controller.rb
+        app/controllers/admin/dashboard_controller.rb
+
+        # VIEWS
+        app/views/admin/layouts/admin.html.erb
+        app/views/admin/dashboard/index.html.erb
+
+        # ROUTES NAMESPACE
+        namespace :admin do
+            get '/' => dashboard#index, as: 'dashboard'
+        end
+
+    # ------------------------------------------------ #
+
+    rails generate skinny_admin:controller CONTROLLER_NAME
+
+    This will create:
+        # JS FILE
+        app/assets/javavscripts/admin/CONTROLLER_NAME.js
+
+        # CSS FILE
+        app/assets/stylesheets/admin/CONTROLLER_NAME.css
+
+        # CONTROLLER FILE
+        app/controllers/admin/CONTROLLER_NAME.rb
+
+        # VIEWS
+        app/views/admin/CONTROLLER_NAME/_form.html.erb
+        app/views/admin/CONTROLLER_NAME/edit.html.erb
+        app/views/admin/CONTROLLER_NAME/index.html.erb
+        app/views/admin/CONTROLLER_NAME/new.html.erb
+        app/views/admin/CONTROLLER_NAME/show.html.erb
+
+        # ROUTES
+        Add resources :CONTROLLER_NAME to admin namespace
