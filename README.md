@@ -1,4 +1,4 @@
-# SkinnyAdmin
+# SkinnyAdmin [![Build Status](https://travis-ci.org/johnnypaper/skinny_admin.svg?branch=master)](https://travis-ci.org/johnnypaper/skinny_admin)
 
 Easily create an admin interface in Rails.  Unlike other administrative frameworks, Skinny Admin is meant
 to be a quick way to setup your Administrative needs and allow you to work within Ruby/Rails with
