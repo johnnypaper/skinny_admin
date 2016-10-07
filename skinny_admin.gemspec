@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Easily customizable admin generator for Rails.  SkinnyAdmin is very easy to install and get your customized administrative needs met quickly."
   spec.homepage      = "http://skinnyadmin.org"
   spec.license       = "MIT"
-  spec.platform      = Gem::Platform.local
+  spec.platform      = Gem::Platform::RUBY
   spec.rubygems_version
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

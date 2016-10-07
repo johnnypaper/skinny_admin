@@ -5,3 +5,7 @@
 ##Version 0.1.1
 
 * fixed bundler issue
+
+##Version 0.1.2
+
+* fixed platform issue
