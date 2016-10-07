@@ -1,8 +1,10 @@
 # SkinnyAdmin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/skinny_admin`. To experiment with that code, run `bin/console` for an interactive prompt.
+Easily create an admin interface in Rails.  Unlike other administrative frameworks, Skinny Admin is meant
+to be a quick way to setup your Administrative needs and allow you to work within Ruby/Rails with
+no strange DSLs.  This will allow you to use what you already know and reduce startup time.
 
-TODO: Delete this and the text above, and describe your gem
+Please see the Documentation and take the Test Drive at [SkinnyAdmin.org](http://skinnyadmin.orgy)
 
 ## Installation
 
@@ -22,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-Full usage instructions and changes can be found at [Skinny Admin](http://skinnyadmin.org).
+Full usage instructions and changes can be found at [SkinnyAdmin.org](http://skinnyadmin.org).
 
 ## Contributing
 
