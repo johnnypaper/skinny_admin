@@ -9,3 +9,7 @@
 ##Version 0.1.2
 
 * fixed platform issue
+
+##Version 0.1.3
+
+* homepage over https

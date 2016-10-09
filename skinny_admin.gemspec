@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["brad.saterfiel@gmail.com"]
   spec.summary       = "SkinnyAdmin is an admin template generator that is easy, quick, and painless to get going.  No DSL involved."
   spec.description   = "Easily customizable admin generator for Rails.  SkinnyAdmin is very easy to install and get your customized administrative needs met quickly."
-  spec.homepage      = "http://skinnyadmin.org"
+  spec.homepage      = "https://skinnyadmin.org"
   spec.license       = "MIT"
   spec.platform      = Gem::Platform::RUBY
   spec.rubygems_version
