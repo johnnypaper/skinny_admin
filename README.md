@@ -4,7 +4,7 @@ Easily create an admin interface in Rails.  Unlike other administrative framewor
 to be a quick way to setup your Administrative needs and allow you to work within Ruby/Rails with
 no strange DSLs.  This will allow you to use what you already know and reduce startup time.
 
-Please see the Documentation and take the Test Drive at [SkinnyAdmin.org](https://skinnyadmin.org)
+Please see the Documentation here or visit [SkinnyAdmin.org](https://skinnyadmin.org) for more detail.
 
 ## Installation
 
